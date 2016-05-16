@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Escape from Castle Blackthorn</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="assets/js/phaser.js"></script>
+    <script src="assets/js/Boot.js"></script>
+    <script src="assets/js/Preloader.js"></script>
+    <script src="assets/js/Menu.js"></script>
+    <script src="assets/js/Intro.js"></script>
+    <script src="assets/js/undergroundCaves1.js"></script>
+    <script src="assets/js/undergroundCaves2.js"></script>
+    <script src="assets/js/GameOver.js"></script>
+	
+</head>
+
+<body>
+
+	<div id="gameContainer"></div>
+    <script type="text/javascript">
+        window.onload = function() {
+            var game = new Phaser.Game(600, 450, Phaser.AUTO, 'gameContainer');
+            game.state.add('Boot', CastleBlackthorn.Boot);
+            game.state.add('Preloader', CastleBlackthorn.Preloader);
+            game.state.add('Menu', CastleBlackthorn.Menu);
+            game.state.add('Intro', CastleBlackthorn.Intro);
+            game.state.add('undergroundCaves1', CastleBlackthorn.undergroundCaves1);
+            game.state.add('undergroundCaves2', CastleBlackthorn.undergroundCaves2);
+            game.state.add('GameOver', CastleBlackthorn.GameOver);
+            game.state.start('Boot');
+        }
+            
+    </script>
+            
+
+</body>
+
+</html>
